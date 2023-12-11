@@ -1,0 +1,18 @@
+{{template "base" .}} {{define "content"}}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>This is a Home Page</h1>
+            <a href="/about">About</a>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
+                exercitationem tenetur fugit eveniet sunt fugiat debitis
+                perspiciatis laboriosam cum laudantium!
+            </p>
+            <button>Hello</button>
+            <div>This is from template : {{index .StringMap "test"}}</div>
+        </div>
+    </div>
+</div>
+
+{{end}}
