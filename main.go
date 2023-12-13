@@ -44,9 +44,6 @@ func main() {
 
 	render.NewTemplates(&app)
 
-	// http.HandleFunc("/", handlers.Repo.Home)
-	// http.HandleFunc("/about", handlers.Repo.About)
-
 	server := &http.Server{
 		Addr:    port,
 		Handler: routes(&app),
