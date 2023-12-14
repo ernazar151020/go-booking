@@ -53,11 +53,11 @@ func RenderTemplate(res http.ResponseWriter, file string, td *models.TemplateDat
 	if err != nil {
 		fmt.Println("Error writing template to browser", err)
 	}
-	parsedTemplate, _ := template.ParseFiles("./templates/" + file)
-	err = parsedTemplate.Execute(res, nil)
-	if err != nil {
-		fmt.Println("Error executing template : ", err)
-	}
+	// parsedTemplate, _ := template.ParseFiles("./templates/" + file)
+	// err = parsedTemplate.Execute(res, nil)
+	// if err != nil {
+	// 	fmt.Println("Error executing template : ", err)
+	// }
 	// return
 }
 

@@ -1,18 +1,58 @@
 {{template "base" .}} {{define "content"}}
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h1>This is a Home Page</h1>
-            <a href="/about">About</a>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-                exercitationem tenetur fugit eveniet sunt fugiat debitis
-                perspiciatis laboriosam cum laudantium!
-            </p>
-            <button>Hello</button>
-            <div>This is from template : {{index .StringMap "test"}}</div>
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img
+                src="../static/images/outside.png"
+                class="d-block w-100"
+                alt="..."
+            />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="../static/images/tray.png"
+                class="d-block w-100"
+                alt="..."
+            />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="../static/images/woman-laptop.png"
+                class="d-block w-100"
+                alt="..."
+            />
         </div>
     </div>
+    <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<h2 class="my-4 text-center">This is Heading</h2>
+<p class="my-4">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sunt,
+    consequatur rem quod est inventore vitae impedit nostrum! Quas error itaque
+    blanditiis inventore, deserunt, dolore dicta natus consectetur fugiat
+    quibusdam nobis velit reprehenderit saepe, laudantium veniam accusamus quia.
+    Accusamus molestias laborum iure rem laudantium culpa consequuntur eaque cum
+    eos repudiandae?
+</p>
+<div class="d-flex justify-content-center my-3">
+    <button type="button" class="btn btn-primary">Primary</button>
 </div>
 
 {{end}}
