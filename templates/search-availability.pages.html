@@ -1,0 +1,83 @@
+{{template "base".}} {{define "css"}}
+<style>
+    .form-group {
+        margin: 20px;
+    }
+</style>
+{{end}} {{define "content"}}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>This is a Search Page</h1>
+            <form
+                class="row g-3 needs-validation"
+                action="/search-availabilty"
+                method="post"
+                novalidate
+            >
+                <input name="csrf_token" type="hidden" value="{{.CSRFToken}}" />
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label"
+                        >Start</label
+                    >
+                    <input
+                        type="date"
+                        class="form-control"
+                        id="validationCustom01"
+                        value="Mark"
+                        required
+                        name="start"
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label"
+                        >End</label
+                    >
+                    <input
+                        name="end"
+                        type="date"
+                        class="form-control"
+                        id="validationCustom02"
+                        value="Otto"
+                        required
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">
+                        Submit form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{end}} {{define "js"}}
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    ;(function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        let forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener(
+                'submit',
+                function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                },
+                false
+            )
+        })
+    })()
+</script>
+{{end}}

@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/ernazar151020/go-packages/config"
-	"github.com/ernazar151020/go-packages/handlers"
-	"github.com/ernazar151020/go-packages/pkg/render"
+	"github.com/ernazar151020/go-packages/internal/config"
+	"github.com/ernazar151020/go-packages/internal/handlers"
+	"github.com/ernazar151020/go-packages/internal/render"
 )
 
 const port = ":8080"
@@ -32,7 +32,7 @@ func main() {
 
 	tc, err := render.CreateTemplateCache()
 	if err != nil {
-		log.Fatal("Cannot create template cache")
+		log.Fatal("Cannot create template cache", err)
 	}
 
 	app.TemplateCache = tc
